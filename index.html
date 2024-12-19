@@ -33,7 +33,7 @@
     <style>
         @font-face {
             font-family: 'Azur Normal';
-            src: url('fonts/Wiescher\ Design\ -\ Azur\ Normal.otf') format('otf');               
+            src: url('fonts/Wiescher\ Design\ -\ Azur\ Normal.otf') format('otf');
             font-weight: normal;
             font-style: normal;
         }
@@ -45,7 +45,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('/KarGo\ on\ Road.jpg');
+            background-image: url('KarGo\ on\ Road.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -54,8 +54,10 @@
         }
 
         .container {
-            max-width: 400px;
+            max-width: 1024px;
+            width: 100%;
             padding: 20px;
+            margin-top: 400px;
             border-radius: 10px;
             background: rgba(0, 0, 0, 0.6);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -69,7 +71,7 @@
         .timer {
             display: flex;
             justify-content: space-around;
-            font-size: 2rem;
+            font-size: 3rem;
             font-weight: bold;
         }
 
@@ -79,9 +81,19 @@
 
         .timer span {
             display: block;
-            font-size: 1rem;
+            font-size: 2rem;
             margin-top: 5px;
         }
+        @media screen and (max-width: 768px) {
+            .timer {
+                font-size: 2rem;
+            }
+            .timer span{
+                font-size: 1.5rem;
+            }
+
+        }
+
     </style>
     <script>
         function updateTimer() {
