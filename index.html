@@ -5,15 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Time Until Christmas:</h1>
+        <div class="timer">
+            <div>
+                <span id="days">0</span>
+                <span>Days</span>
+            </div>
+            <div>
+                <span id="hours">0</span>
+                <span>Hours</span>
+            </div>
+            <div>
+                <span id="minutes">0</span>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <span id="seconds">0</span>
+                <span>Seconds</span>
+            </div>
+        </div>
+    </div>
+
     <style>
+        @font-face {
+            font-family: 'Azur Normal';
+            src: url('fonts/Wiescher\ Design\ -\ Azur\ Normal.otf') format('otf');               
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Azur Normal', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #4a90e2, #50c4a5);
+            background-image: url('/KarGo\ on\ Road.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             color: white;
             text-align: center;
         }
@@ -48,31 +83,6 @@
             margin-top: 5px;
         }
     </style>
-</head>
-
-<body>
-    <div class="container">
-        <h1>Time Until Christmas:</h1>
-        <div class="timer">
-            <div>
-                <span id="days">0</span>
-                <span>Days</span>
-            </div>
-            <div>
-                <span id="hours">0</span>
-                <span>Hours</span>
-            </div>
-            <div>
-                <span id="minutes">0</span>
-                <span>Minutes</span>
-            </div>
-            <div>
-                <span id="seconds">0</span>
-                <span>Seconds</span>
-            </div>
-        </div>
-    </div>
-
     <script>
         function updateTimer() {
             const targetDate = new Date('2024-12-25T06:00:00');
